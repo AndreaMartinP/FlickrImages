@@ -17,6 +17,8 @@
 		B312D2EC2B68613C0096C113 /* ImagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2EB2B68613C0096C113 /* ImagesData.swift */; };
 		B312D2EE2B68616C0096C113 /* ImageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2ED2B68616C0096C113 /* ImageDataModel.swift */; };
 		B312D2F02B6861D70096C113 /* MediaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2EF2B6861D70096C113 /* MediaDataModel.swift */; };
+		B312D2F32B6862BD0096C113 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2F22B6862BD0096C113 /* Networking.swift */; };
+		B312D2F52B68639F0096C113 /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2F42B68639F0096C113 /* NetworkEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		B312D2EB2B68613C0096C113 /* ImagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesData.swift; sourceTree = SOURCE_ROOT; };
 		B312D2ED2B68616C0096C113 /* ImageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModel.swift; sourceTree = "<group>"; };
 		B312D2EF2B6861D70096C113 /* MediaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDataModel.swift; sourceTree = "<group>"; };
+		B312D2F22B6862BD0096C113 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		B312D2F42B68639F0096C113 /* NetworkEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B312D2EA2B68610B0096C113 /* DataModels */,
+				B312D2F12B68628F0096C113 /* Network */,
 				B312D2E92B6860DF0096C113 /* Views */,
 				B312D2C32B685F220096C113 /* Assets.xcassets */,
 				B312D2C52B685F220096C113 /* Preview Content */,
@@ -150,6 +155,15 @@
 				B312D2EF2B6861D70096C113 /* MediaDataModel.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		B312D2F12B68628F0096C113 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B312D2F22B6862BD0096C113 /* Networking.swift */,
+				B312D2F42B68639F0096C113 /* NetworkEndpoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B312D2F52B68639F0096C113 /* NetworkEndpoint.swift in Sources */,
 				B312D2F02B6861D70096C113 /* MediaDataModel.swift in Sources */,
 				B312D2C22B685F210096C113 /* ContentView.swift in Sources */,
 				B312D2EE2B68616C0096C113 /* ImageDataModel.swift in Sources */,
+				B312D2F32B6862BD0096C113 /* Networking.swift in Sources */,
 				B312D2C02B685F210096C113 /* FlickrImagesApp.swift in Sources */,
 				B312D2EC2B68613C0096C113 /* ImagesData.swift in Sources */,
 			);

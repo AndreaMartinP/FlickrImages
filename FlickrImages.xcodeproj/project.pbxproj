@@ -22,6 +22,9 @@
 		B312D2F72B6867490096C113 /* GridViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2F62B6867490096C113 /* GridViewViewModel.swift */; };
 		B312D2FA2B6868CA0096C113 /* GridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2F92B6868CA0096C113 /* GridItemView.swift */; };
 		B312D2FC2B686B070096C113 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2FB2B686B070096C113 /* ImageDetailView.swift */; };
+		B312D2FF2B687D530096C113 /* SliceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2FE2B687D530096C113 /* SliceString.swift */; };
+		B312D3012B6887BE0096C113 /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D3002B6887BE0096C113 /* MockNetworking.swift */; };
+		B312D3032B6888BB0096C113 /* GridViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D3022B6888BB0096C113 /* GridViewViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		B312D2F62B6867490096C113 /* GridViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewViewModel.swift; sourceTree = "<group>"; };
 		B312D2F92B6868CA0096C113 /* GridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemView.swift; sourceTree = "<group>"; };
 		B312D2FB2B686B070096C113 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		B312D2FE2B687D530096C113 /* SliceString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliceString.swift; sourceTree = "<group>"; };
+		B312D3002B6887BE0096C113 /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
+		B312D3022B6888BB0096C113 /* GridViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 		B312D2BE2B685F210096C113 /* FlickrImages */ = {
 			isa = PBXGroup;
 			children = (
+				B312D2FD2B687D2B0096C113 /* Extensions */,
 				B312D2EA2B68610B0096C113 /* DataModels */,
 				B312D2F12B68628F0096C113 /* Network */,
 				B312D2E92B6860DF0096C113 /* Views */,
@@ -131,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				B312D2D02B685F220096C113 /* FlickrImagesTests.swift */,
+				B312D3002B6887BE0096C113 /* MockNetworking.swift */,
+				B312D3022B6888BB0096C113 /* GridViewViewModelTests.swift */,
 			);
 			path = FlickrImagesTests;
 			sourceTree = "<group>";
@@ -181,6 +190,14 @@
 				B312D2F62B6867490096C113 /* GridViewViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B312D2FD2B687D2B0096C113 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B312D2FE2B687D530096C113 /* SliceString.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +334,7 @@
 				B312D2F52B68639F0096C113 /* NetworkEndpoint.swift in Sources */,
 				B312D2F02B6861D70096C113 /* MediaDataModel.swift in Sources */,
 				B312D2C22B685F210096C113 /* GridView.swift in Sources */,
+				B312D2FF2B687D530096C113 /* SliceString.swift in Sources */,
 				B312D2EE2B68616C0096C113 /* ImageDataModel.swift in Sources */,
 				B312D2F32B6862BD0096C113 /* Networking.swift in Sources */,
 				B312D2C02B685F210096C113 /* FlickrImagesApp.swift in Sources */,
@@ -330,7 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B312D3032B6888BB0096C113 /* GridViewViewModelTests.swift in Sources */,
 				B312D2D12B685F220096C113 /* FlickrImagesTests.swift in Sources */,
+				B312D3012B6887BE0096C113 /* MockNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

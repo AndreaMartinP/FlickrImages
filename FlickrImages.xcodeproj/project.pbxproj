@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B312D2C02B685F210096C113 /* FlickrImagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2BF2B685F210096C113 /* FlickrImagesApp.swift */; };
-		B312D2C22B685F210096C113 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2C12B685F210096C113 /* ContentView.swift */; };
+		B312D2C22B685F210096C113 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2C12B685F210096C113 /* GridView.swift */; };
 		B312D2C42B685F220096C113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B312D2C32B685F220096C113 /* Assets.xcassets */; };
 		B312D2C72B685F220096C113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B312D2C62B685F220096C113 /* Preview Assets.xcassets */; };
 		B312D2D12B685F220096C113 /* FlickrImagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2D02B685F220096C113 /* FlickrImagesTests.swift */; };
@@ -19,6 +19,9 @@
 		B312D2F02B6861D70096C113 /* MediaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2EF2B6861D70096C113 /* MediaDataModel.swift */; };
 		B312D2F32B6862BD0096C113 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2F22B6862BD0096C113 /* Networking.swift */; };
 		B312D2F52B68639F0096C113 /* NetworkEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2F42B68639F0096C113 /* NetworkEndpoint.swift */; };
+		B312D2F72B6867490096C113 /* GridViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2F62B6867490096C113 /* GridViewViewModel.swift */; };
+		B312D2FA2B6868CA0096C113 /* GridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2F92B6868CA0096C113 /* GridItemView.swift */; };
+		B312D2FC2B686B070096C113 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312D2FB2B686B070096C113 /* ImageDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +44,7 @@
 /* Begin PBXFileReference section */
 		B312D2BC2B685F210096C113 /* FlickrImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B312D2BF2B685F210096C113 /* FlickrImagesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImagesApp.swift; sourceTree = "<group>"; };
-		B312D2C12B685F210096C113 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B312D2C12B685F210096C113 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		B312D2C32B685F220096C113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B312D2C62B685F220096C113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B312D2CC2B685F220096C113 /* FlickrImagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrImagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +57,9 @@
 		B312D2EF2B6861D70096C113 /* MediaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDataModel.swift; sourceTree = "<group>"; };
 		B312D2F22B6862BD0096C113 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		B312D2F42B68639F0096C113 /* NetworkEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoint.swift; sourceTree = "<group>"; };
+		B312D2F62B6867490096C113 /* GridViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewViewModel.swift; sourceTree = "<group>"; };
+		B312D2F92B6868CA0096C113 /* GridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemView.swift; sourceTree = "<group>"; };
+		B312D2FB2B686B070096C113 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +147,11 @@
 		B312D2E92B6860DF0096C113 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B312D2C12B685F210096C113 /* ContentView.swift */,
 				B312D2BF2B685F210096C113 /* FlickrImagesApp.swift */,
+				B312D2C12B685F210096C113 /* GridView.swift */,
+				B312D2FB2B686B070096C113 /* ImageDetailView.swift */,
+				B312D2F92B6868CA0096C113 /* GridItemView.swift */,
+				B312D2F82B6868AA0096C113 /* ViewModels */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +173,14 @@
 				B312D2F42B68639F0096C113 /* NetworkEndpoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B312D2F82B6868AA0096C113 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B312D2F62B6867490096C113 /* GridViewViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,13 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B312D2FA2B6868CA0096C113 /* GridItemView.swift in Sources */,
 				B312D2F52B68639F0096C113 /* NetworkEndpoint.swift in Sources */,
 				B312D2F02B6861D70096C113 /* MediaDataModel.swift in Sources */,
-				B312D2C22B685F210096C113 /* ContentView.swift in Sources */,
+				B312D2C22B685F210096C113 /* GridView.swift in Sources */,
 				B312D2EE2B68616C0096C113 /* ImageDataModel.swift in Sources */,
 				B312D2F32B6862BD0096C113 /* Networking.swift in Sources */,
 				B312D2C02B685F210096C113 /* FlickrImagesApp.swift in Sources */,
 				B312D2EC2B68613C0096C113 /* ImagesData.swift in Sources */,
+				B312D2F72B6867490096C113 /* GridViewViewModel.swift in Sources */,
+				B312D2FC2B686B070096C113 /* ImageDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

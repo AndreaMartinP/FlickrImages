@@ -12,9 +12,6 @@ protocol Networkable {
 }
 
 class Networking: Networkable {
-    enum NetworkingError: Error {
-        case invalidURL
-    }
     
     static let shared = Networking()
     private var session: URLSession
@@ -24,9 +21,7 @@ class Networking: Networkable {
     }
     
     func fetchAndDecode<T>(route: NetworkEndpoint.Route) async throws -> T where T : Decodable, T : Encodable {
-        guard let url = route.createUrl() else {
-            throw NetworkingError.invalidURL
-        }
+        let url = try route.createUrl()
         let request = URLRequest(url: url)
         let (data, _) = try await session.data(for: request)
         let json = try JSONSerialization.jsonObject(with: data)

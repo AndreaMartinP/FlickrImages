@@ -8,25 +8,45 @@
 import Foundation
 
 struct NetworkEndpoint {
+    static let baseURL = URL(string: "https://api.flickr.com")!
+    
+    enum EndpointError: Error {
+        case couldNotCreateComponents
+        case invalidURL
+    }
+    
     enum Route {
-        case photoWithTag(tagString: String)
+        case photoWith(tag: String)
         
-        func createUrl() -> URL? {
+        var path: String {
             switch self {
-            case .photoWithTag(tagString: let tagString):
-                let path = "/services/feeds/photos_public.gne"
-                let queryItemFirst = URLQueryItem(name: "format", value: "json")
-                let queryItemSecond = URLQueryItem(name: "nojsoncallback", value: "1")
-                var urlComponents = URLComponents(url:NetworkEndpoint().baseURL, resolvingAgainstBaseURL: true)
-                urlComponents?.path = path
-                var urlQueryItems = [queryItemFirst, queryItemSecond]
-                let tagQuery = URLQueryItem(name: "tags", value: tagString)
-                urlQueryItems.append(tagQuery)
-                urlComponents?.queryItems = urlQueryItems
-                return urlComponents?.url
-
+            case .photoWith(_):
+                "/services/feeds/photos_public.gne"
             }
         }
+        
+        func createUrl() throws -> URL {
+            switch self {
+            case .photoWith(tag: let tag):
+                guard var urlComponents = URLComponents(url:NetworkEndpoint.baseURL, resolvingAgainstBaseURL: true) else {
+                    throw EndpointError.couldNotCreateComponents
+                }
+                urlComponents.path = path
+                var urlQueryItems = defaultQueryItems
+                urlQueryItems.append(URLQueryItem(name: "tags", value: tag))
+                urlComponents.queryItems = urlQueryItems
+                guard let url = urlComponents.url else {
+                    throw EndpointError.invalidURL
+                }
+                return url
+            }
+        }
+        
+        var defaultQueryItems: [URLQueryItem] {
+            let format = URLQueryItem(name: "format", value: "json")
+            let nojsoncallback = URLQueryItem(name: "nojsoncallback", value: "1")
+            return [format, nojsoncallback]
+        }
     }
-    let baseURL = URL(string: "https://api.flickr.com")!
+    
 }
